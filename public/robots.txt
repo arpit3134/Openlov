@@ -1,1 +1,11 @@
 
+
+## **Public Files**
+
+```robots.txt name=public/robots.txt url=https://github.com/arpit3134/Openlov/blob/main/public/robots.txt
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+Sitemap: https://openlov.com/sitemap.xml
