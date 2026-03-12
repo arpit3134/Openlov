@@ -1,40 +1,26 @@
-'use client';
+import Link from "next/link";
 
-import Link from 'next/link';
-import { useState } from 'react';
-import { navItems } from '@/config/site';
-
-export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-
+export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-blue-700">
-              <span className="text-lg font-bold text-white">O</span>
-            </div>
-            <span className="hidden text-xl font-bold text-gray-900 sm:inline">Openlov</span>
-          </Link>
+    <nav className="w-full border-b bg-white">
+      <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
-            {navItems.map(item => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+        <Link href="/" className="text-xl font-bold">
+          OpenLov
+        </Link>
 
-          {/* Right Side Actions */}
+        <div className="flex gap-6 text-sm">
+          <Link href="/">Home</Link>
+          <Link href="/tools">Tools</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/categories">Categories</Link>
+          <Link href="/submit-tool">Submit Tool</Link>
+        </div>
+
+      </div>
+    </nav>
+  );
+}          {/* Right Side Actions */}
           <div className="flex items-center gap-2">
             {/* Search Button */}
             <button
