@@ -3,14 +3,14 @@ export const SITE_NAME = 'Openlov';
 export const SITE_DESCRIPTION = 'Discover the best AI tools and resources';
 
 export const CATEGORIES = [
-  { id: '1', name: 'Text Generation', slug: 'text-generation', icon: '✍️' },
-  { id: '2', name: 'Image Generation', slug: 'image-generation', icon: '🎨' },
-  { id: '3', name: 'Code Assistant', slug: 'code-assistant', icon: '💻' },
-  { id: '4', name: 'Video Tools', slug: 'video-tools', icon: '🎬' },
-  { id: '5', name: 'Audio Tools', slug: 'audio-tools', icon: '🎵' },
-  { id: '6', name: 'Productivity', slug: 'productivity', icon: '⚡' },
-  { id: '7', name: 'Analytics', slug: 'analytics', icon: '📊' },
-  { id: '8', name: 'Content Creation', slug: 'content-creation', icon: '📝' },
+  { id: '1', name: 'Text Generation', slug: 'text-generation', icon: '✍️', count: 2 },
+  { id: '2', name: 'Image Generation', slug: 'image-generation', icon: '🎨', count: 1 },
+  { id: '3', name: 'Code Assistant', slug: 'code-assistant', icon: '💻', count: 1 },
+  { id: '4', name: 'Video Tools', slug: 'video-tools', icon: '🎬', count: 1 },
+  { id: '5', name: 'Audio Tools', slug: 'audio-tools', icon: '🎵', count: 1 },
+  { id: '6', name: 'Productivity', slug: 'productivity', icon: '⚡', count: 1 },
+  { id: '7', name: 'Analytics', slug: 'analytics', icon: '📊', count: 1 },
+  { id: '8', name: 'Content Creation', slug: 'content-creation', icon: '📝', count: 1 },
 ];
 
 export const SOCIAL_LINKS = {

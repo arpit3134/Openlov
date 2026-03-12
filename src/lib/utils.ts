@@ -4,8 +4,17 @@ export function classNames(...classes: (string | boolean | undefined)[]): string
   return classes.filter(Boolean).join(' ');
 }
 
-export function formatDate(date: string | Date): string {
+export function formatDate(date: string | Date | null | undefined): string {
+  if (!date) {
+    return 'Date not available';
+  }
+
   const d = new Date(date);
+
+  if (isNaN(d.getTime())) {
+    return 'Invalid date';
+  }
+
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'long',

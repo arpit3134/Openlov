@@ -26,7 +26,7 @@ export function BlogCard({ post, variant = "default" }: BlogCardProps) {
             Featured
           </span>
           <span className="text-xs font-mono-custom" style={{ color: "var(--muted)" }}>
-            {post.readTime} min read
+            {post.readingTime} min read
           </span>
         </div>
 
@@ -48,7 +48,7 @@ export function BlogCard({ post, variant = "default" }: BlogCardProps) {
             </span>
             <span className="text-xs mx-2" style={{ color: "var(--muted)" }}>·</span>
             <span className="text-xs" style={{ color: "var(--muted)" }}>
-              {formatDate(post.publishedAt)}
+              {formatDate(post.createdAt)}
             </span>
           </div>
           <span className="text-sm" style={{ color: "var(--accent-light)" }}>
@@ -109,11 +109,11 @@ export function BlogCard({ post, variant = "default" }: BlogCardProps) {
           </span>
           <span className="text-xs mx-1" style={{ color: "var(--muted)" }}>·</span>
           <span className="text-xs" style={{ color: "var(--muted)" }}>
-            {formatDate(post.publishedAt)}
+            {formatDate(post.createdAt)}
           </span>
         </div>
         <span className="text-xs font-mono-custom" style={{ color: "var(--muted)" }}>
-          {post.readTime}m
+          {post.readingTime}m
         </span>
       </div>
     </Link>
