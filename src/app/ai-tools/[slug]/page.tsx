@@ -67,11 +67,17 @@ export default function ToolDetailPage({ params }: Props) {
         style={{ borderBottom: "1px solid var(--border)", background: "var(--paper)" }}
         className="py-3"
       >
-        <div className="max-w-5xl mx-auto px-6 flex items-center gap-2 text-xs font-mono-custom"
-          style={{ color: "var(--muted)" }}>
-          <Link href="/" className="hover:underline" style={{ color: "var(--muted)" }}>Home</Link>
+        <div
+          className="max-w-5xl mx-auto px-6 flex items-center gap-2 text-xs font-mono-custom"
+          style={{ color: "var(--muted)" }}
+        >
+          <Link href="/" className="hover:underline" style={{ color: "var(--muted)" }}>
+            Home
+          </Link>
           <span>/</span>
-          <Link href="/tools" className="hover:underline" style={{ color: "var(--muted)" }}>Tools</Link>
+          <Link href="/ai-tools" className="hover:underline" style={{ color: "var(--muted)" }}>
+            Tools
+          </Link>
           <span>/</span>
           <Link
             href={`/categories#${tool.category}`}
@@ -225,7 +231,7 @@ export default function ToolDetailPage({ params }: Props) {
                 Visit {tool.name} →
               </a>
               <Link
-                href="/tools"
+                href="/ai-tools"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-sm text-sm transition-all"
                 style={{
                   background: "transparent",
@@ -244,7 +250,6 @@ export default function ToolDetailPage({ params }: Props) {
       <div className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Left / main */}
         <div className="lg:col-span-2 space-y-10">
-
           {/* Tags */}
           <section>
             <h2
@@ -270,10 +275,9 @@ export default function ToolDetailPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Divider */}
           <hr style={{ border: "none", borderTop: "1px solid var(--border)" }} />
 
-          {/* About section (placeholder for extended content) */}
+          {/* About */}
           <section>
             <h2
               className="font-display font-bold text-2xl mb-4"
@@ -288,16 +292,10 @@ export default function ToolDetailPage({ params }: Props) {
                 border: "1px solid var(--border)",
               }}
             >
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "var(--muted)" }}
-              >
+              <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
                 {tool.description}
               </p>
-              <p
-                className="text-xs mt-4 italic"
-                style={{ color: "var(--border)" }}
-              >
+              <p className="text-xs mt-4 italic" style={{ color: "var(--border)" }}>
                 Extended description can be added by editing{" "}
                 <code
                   className="font-mono-custom not-italic px-1 py-0.5 rounded"
@@ -317,7 +315,6 @@ export default function ToolDetailPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Divider */}
           <hr style={{ border: "none", borderTop: "1px solid var(--border)" }} />
 
           {/* Related tools */}
@@ -354,10 +351,7 @@ export default function ToolDetailPage({ params }: Props) {
             className="rounded-sm overflow-hidden"
             style={{ border: "1px solid var(--border)" }}
           >
-            <div
-              className="px-5 py-3"
-              style={{ background: "var(--ink)" }}
-            >
+            <div className="px-5 py-3" style={{ background: "var(--ink)" }}>
               <span
                 className="font-mono-custom text-xs tracking-widest uppercase"
                 style={{ color: "rgba(245,242,235,0.5)" }}
@@ -438,16 +432,13 @@ export default function ToolDetailPage({ params }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between w-full px-5 py-4 rounded-sm font-semibold text-sm transition-all group"
-            style={{
-              background: "var(--accent)",
-              color: "white",
-            }}
+            style={{ background: "var(--accent)", color: "white" }}
           >
             <span>Visit {tool.name}</span>
             <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
           </a>
 
-          {/* All tags in sidebar */}
+          {/* Tags sidebar */}
           <div
             className="rounded-sm p-5"
             style={{ background: "var(--paper)", border: "1px solid var(--border)" }}
@@ -480,17 +471,10 @@ export default function ToolDetailPage({ params }: Props) {
             className="rounded-sm p-5 text-center"
             style={{ background: "var(--paper)", border: "1px dashed var(--border)" }}
           >
-            <p
-              className="text-xs leading-relaxed mb-3"
-              style={{ color: "var(--muted)" }}
-            >
+            <p className="text-xs leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
               Is something wrong or outdated?
             </p>
-            <a
-              href="#"
-              className="text-xs font-semibold"
-              style={{ color: "var(--accent)" }}
-            >
+            <a href="#" className="text-xs font-semibold" style={{ color: "var(--accent)" }}>
               Suggest an edit →
             </a>
           </div>
@@ -500,10 +484,7 @@ export default function ToolDetailPage({ params }: Props) {
       {/* ── Bottom CTA ── */}
       <section
         className="py-14"
-        style={{
-          background: "var(--paper)",
-          borderTop: "3px double var(--border)",
-        }}
+        style={{ background: "var(--paper)", borderTop: "3px double var(--border)" }}
       >
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p
@@ -519,8 +500,8 @@ export default function ToolDetailPage({ params }: Props) {
             Submit it to OpenLov
           </h2>
           <p className="text-sm mb-7" style={{ color: "var(--muted)" }}>
-            Help others discover great AI tools. Submissions are reviewed
-            and listed within 48 hours.
+            Help others discover great AI tools. Submissions are reviewed and
+            listed within 48 hours.
           </p>
           <a
             href="#"
