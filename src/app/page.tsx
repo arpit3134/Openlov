@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const featuredTools = getFeaturedTools(tools, 6);
-  const latestBlogPosts = blogs.slice(0, 3);
+  const latestBlogs = blogs.slice(0, 3);
 
   return (
     <div className="w-full">
@@ -102,7 +102,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {latestBlogPosts.map(post => (
+            {latestBlogs.map(post => (
               <BlogCard key={post.id} post={post} />
             ))}
           </div>
