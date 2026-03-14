@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { tools } from '@/data/tools';
-import { blogPosts } from '@/data/blog';
+import { blogs } from '@/data/blog';
 import { ToolCard } from '@/components/cards/ToolCard';
 import { BlogCard } from '@/components/cards/BlogCard';
 import { Button } from '@/components/ui/Button';
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const featuredTools = getFeaturedTools(tools, 6);
-  const latestBlogPosts = blogPosts.slice(0, 3);
+  const latestBlogPosts = blogs.slice(0, 3);
 
   return (
     <div className="w-full">
