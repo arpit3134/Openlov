@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { ThemeProvider } from '@/context/ThemeContext';
 import { siteConfig } from '@/config/site';
+import { Toaster } from 'sonner';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -11,12 +13,14 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    'AI tools',
-    'AI directory',
-    'machine learning',
-    'AI resources',
-    'AI news',
-    'blog',
+    'content discovery',
+    'articles',
+    'topics',
+    'collections',
+    'resources',
+    'tools',
+    'technology',
+    'design',
   ],
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
@@ -27,20 +31,11 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: `${siteConfig.url}${siteConfig.image}`,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}${siteConfig.image}`],
   },
   robots: {
     index: true,
@@ -54,16 +49,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className="noise-overlay">
+        <ThemeProvider>
+          <Header />
+          <main className="min-h-screen pt-16 md:pt-20">{children}</main>
+          <Footer />
+          <Toaster 
+            position="bottom-right"
+            toastOptions={{
+              className: 'bg-background-surface border-white/10 text-foreground',
+            }}
+          />
+        </ThemeProvider>
       </body>
     </html>
   );
