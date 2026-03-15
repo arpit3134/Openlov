@@ -2,15 +2,23 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+    }
+  };
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden" data-testid="hero-section">
@@ -59,6 +67,34 @@ export function HeroSection() {
             Explore topics that matter, collections that inspire, and insights that inform.
           </p>
 
+          {/* Premium Search Bar */}
+          <form
+            onSubmit={handleSearch}
+            className={`max-w-2xl mb-10 transition-all duration-700 delay-400 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-purple-500/20 rounded-xl blur-lg opacity-50" />
+              <div className="relative flex items-center gap-3 px-6 py-4 bg-background-surface border border-white/10 rounded-xl hover:border-white/20 focus-within:border-white/30 transition-all duration-200">
+                <Search className="w-5 h-5 text-foreground-muted flex-shrink-0" strokeWidth={1.5} />
+                <input
+                  type="text"
+                  placeholder="Search articles, topics, tools, calculators..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="flex-1 bg-transparent text-foreground placeholder:text-foreground-muted outline-none text-base"
+                />
+                <button
+                  type="submit"
+                  className="flex-shrink-0 px-4 py-2 bg-brand-primary text-white rounded-lg hover:bg-brand-primary/90 transition-colors font-medium text-sm"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+
           {/* CTAs */}
           <div
             className={`flex flex-wrap gap-4 transition-all duration-700 delay-400 ${
@@ -71,9 +107,9 @@ export function HeroSection() {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
               </Button>
             </Link>
-            <Link href="/topics" data-testid="hero-cta-topics">
+            <Link href="/tools/calculators" data-testid="hero-cta-calculators">
               <Button variant="secondary" size="lg">
-                Browse Topics
+                Try Calculators
               </Button>
             </Link>
           </div>

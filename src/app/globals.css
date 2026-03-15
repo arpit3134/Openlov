@@ -29,7 +29,16 @@ body.light {
   color: #1C1917;
 }
 
-/* Light mode overrides */
+/* Light mode overrides - comprehensive */
+body.light {
+  background-color: #FAFAF9 !important;
+  color: #1C1917 !important;
+}
+
+body.light * {
+  color-scheme: light;
+}
+
 body.light .text-foreground {
   color: #1C1917 !important;
 }
@@ -50,25 +59,142 @@ body.light .bg-background-surface {
   background-color: #FFFFFF !important;
 }
 
-body.light .border-white\/5,
+body.light .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
 body.light .border-white\/10 {
   border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.12) !important;
 }
 
 body.light .bg-white\/5 {
   background-color: rgba(0, 0, 0, 0.03) !important;
 }
 
+body.light .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
 body.light .hover\:bg-white\/5:hover {
   background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light .hover\:bg-white\/10:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
 }
 
 body.light .bg-brand-primary\/10 {
   background-color: rgba(59, 130, 246, 0.1) !important;
 }
 
+body.light .bg-brand-primary\/20 {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+body.light .text-brand-primary {
+  color: #3B82F6 !important;
+}
+
 body.light .bg-hero-glow {
   background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 70%) !important;
+}
+
+body.light .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Input and form styling in light mode */
+body.light input,
+body.light textarea,
+body.light select {
+  background-color: #FAFAF9 !important;
+  color: #1C1917 !important;
+}
+
+body.light input::placeholder,
+body.light textarea::placeholder {
+  color: #78716C !important;
+}
+
+body.light input:focus,
+body.light textarea:focus {
+  background-color: #FFFFFF !important;
+  border-color: #3B82F6 !important;
+}
+
+/* Button styling in light mode */
+body.light .btn-primary {
+  background-color: #1C1917 !important;
+  color: #FFFFFF !important;
+}
+
+body.light .btn-primary:hover {
+  background-color: #3F3F46 !important;
+}
+
+body.light .btn-secondary {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #1C1917 !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light .btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light .btn-ghost {
+  color: #57534E !important;
+}
+
+body.light .btn-ghost:hover {
+  color: #1C1917 !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Card styling in light mode */
+body.light .card-base {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light .card-base:hover {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Glass effect in light mode */
+body.light .glass {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Tag styling in light mode */
+body.light .tag {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  color: #57534E !important;
+}
+
+body.light .tag:hover {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Scrollbar in light mode */
+body.light ::-webkit-scrollbar-track {
+  background: #F5F5F4 !important;
+}
+
+body.light ::-webkit-scrollbar-thumb {
+  background: #D4D4D4 !important;
+}
+
+body.light ::-webkit-scrollbar-thumb:hover {
+  background: #B4B4B4 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
