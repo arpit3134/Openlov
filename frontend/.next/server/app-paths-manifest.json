@@ -1,12 +1,8 @@
 {
   "/page": "app/page.js",
+  "/discover/page": "app/discover/page.js",
+  "/articles/page": "app/articles/page.js",
   "/tools/calculators/page": "app/tools/calculators/page.js",
   "/tools/page": "app/tools/page.js",
-  "/tools/finance/page": "app/tools/finance/page.js",
-  "/topics/page": "app/topics/page.js",
-  "/discover/page": "app/discover/page.js",
-  "/tools/ai/page": "app/tools/ai/page.js",
-  "/tools/developer/page": "app/tools/developer/page.js",
-  "/tools/design/page": "app/tools/design/page.js",
-  "/tools/productivity/page": "app/tools/productivity/page.js"
+  "/articles/[slug]/page": "app/articles/[slug]/page.js"
 }

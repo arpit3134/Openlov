@@ -1310,14 +1310,14 @@ video {
 .opacity-0{
   opacity: 0;
 }
+.opacity-100{
+  opacity: 1;
+}
 .opacity-20{
   opacity: 0.2;
 }
 .opacity-50{
   opacity: 0.5;
-}
-.opacity-100{
-  opacity: 1;
 }
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
@@ -1356,11 +1356,6 @@ video {
 .backdrop-blur-xl{
   --tw-backdrop-blur: blur(24px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 .transition-all{
   transition-property: all;
@@ -1430,6 +1425,48 @@ body {
 body.light {
   background-color: #FAFAF9;
   color: #1C1917;
+}
+
+/* Light mode overrides */
+body.light .text-foreground {
+  color: #1C1917 !important;
+}
+
+body.light .text-foreground-secondary {
+  color: #57534E !important;
+}
+
+body.light .text-foreground-muted {
+  color: #78716C !important;
+}
+
+body.light .bg-background {
+  background-color: #FAFAF9 !important;
+}
+
+body.light .bg-background-surface {
+  background-color: #FFFFFF !important;
+}
+
+body.light .border-white\/5,
+body.light .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+body.light .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light .bg-brand-primary\/10 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+body.light .bg-hero-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 70%) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1528,6 +1565,10 @@ select {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+body.light .glass {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
 .light .glass{
   border-width: 1px;
   border-color: rgb(0 0 0 / 0.05);
@@ -1545,6 +1586,15 @@ select {
   border-color: rgb(255 255 255 / 0.1);
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));
+}
+body.light .card-base {
+  background-color: #FFFFFF;
+}
+
+body.light .card-base {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+.card-base{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -1620,6 +1670,15 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+
+body.light .btn-secondary {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light .btn-secondary {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
 .btn-secondary:hover{
   background-color: rgb(255 255 255 / 0.1);
 }
@@ -1649,6 +1708,10 @@ select {
   padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity, 1));
+}
+
+body.light .btn-ghost:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .btn-ghost:hover{
@@ -1691,6 +1754,15 @@ select {
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
   color: rgb(212 212 216 / var(--tw-text-opacity, 1));
+}
+
+body.light .tag {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+body.light .tag {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.tag{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;

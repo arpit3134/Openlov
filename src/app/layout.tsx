@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { ThemeProvider } from '@/context/ThemeContext';
 import { siteConfig } from '@/config/site';
 import { Toaster } from 'sonner';
 import './globals.css';
@@ -56,17 +55,15 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="noise-overlay">
-        <ThemeProvider>
-          <Header />
-          <main className="min-h-screen pt-16 md:pt-20">{children}</main>
-          <Footer />
-          <Toaster 
-            position="bottom-right"
-            toastOptions={{
-              className: 'bg-background-surface border-white/10 text-foreground',
-            }}
-          />
-        </ThemeProvider>
+        <Header />
+        <main className="min-h-screen pt-16 md:pt-20">{children}</main>
+        <Footer />
+        <Toaster 
+          position="bottom-right"
+          toastOptions={{
+            className: 'bg-background-surface border-white/10 text-foreground',
+          }}
+        />
       </body>
     </html>
   );

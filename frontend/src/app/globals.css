@@ -29,6 +29,48 @@ body.light {
   color: #1C1917;
 }
 
+/* Light mode overrides */
+body.light .text-foreground {
+  color: #1C1917 !important;
+}
+
+body.light .text-foreground-secondary {
+  color: #57534E !important;
+}
+
+body.light .text-foreground-muted {
+  color: #78716C !important;
+}
+
+body.light .bg-background {
+  background-color: #FAFAF9 !important;
+}
+
+body.light .bg-background-surface {
+  background-color: #FFFFFF !important;
+}
+
+body.light .border-white\/5,
+body.light .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+body.light .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light .bg-brand-primary\/10 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+body.light .bg-hero-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 70%) !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }

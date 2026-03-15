@@ -1,11 +1,17 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 export function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden" data-testid="hero-section">
       {/* Background Glow */}
@@ -16,53 +22,48 @@ export function HeroSection() {
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-32 md:py-40">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-          className="max-w-4xl"
+        <div
+          className={`max-w-4xl transition-all duration-700 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          }`}
         >
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 mb-8"
+          <div
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 mb-8 transition-all duration-500 delay-100 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
           >
             <Sparkles className="w-4 h-4 text-brand-primary" strokeWidth={1.5} />
             <span className="text-sm font-medium text-brand-primary">
               Intelligent Content Discovery
             </span>
-          </motion.div>
+          </div>
 
           {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="font-heading text-5xl md:text-7xl font-bold tracking-tight leading-[0.95] text-foreground mb-6"
+          <h1
+            className={`font-heading text-5xl md:text-7xl font-bold tracking-tight leading-[0.95] text-foreground mb-6 transition-all duration-700 delay-200 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
           >
             Discover ideas that{' '}
             <span className="gradient-text">shape the future</span>
-          </motion.h1>
+          </h1>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-lg md:text-xl text-foreground-secondary leading-relaxed max-w-2xl mb-10"
+          <p
+            className={`text-lg md:text-xl text-foreground-secondary leading-relaxed max-w-2xl mb-10 transition-all duration-700 delay-300 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
           >
             Curated articles, resources, and tools for builders, creators, and curious minds. 
             Explore topics that matter, collections that inspire, and insights that inform.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex flex-wrap gap-4"
+          <div
+            className={`flex flex-wrap gap-4 transition-all duration-700 delay-400 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
           >
             <Link href="/discover" data-testid="hero-cta-discover">
               <Button size="lg" className="group">
@@ -75,14 +76,13 @@ export function HeroSection() {
                 Browse Topics
               </Button>
             </Link>
-          </motion.div>
+          </div>
 
           {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-wrap gap-8 md:gap-12 mt-16 pt-8 border-t border-white/5"
+          <div
+            className={`flex flex-wrap gap-8 md:gap-12 mt-16 pt-8 border-t border-white/5 transition-all duration-700 delay-500 ${
+              isVisible ? 'opacity-100' : 'opacity-0'
+            }`}
           >
             {[
               { value: '200+', label: 'Curated Resources' },
@@ -96,8 +96,8 @@ export function HeroSection() {
                 <div className="text-sm text-foreground-muted mt-1">{stat.label}</div>
               </div>
             ))}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
