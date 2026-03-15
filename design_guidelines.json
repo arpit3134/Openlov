@@ -1,0 +1,190 @@
+{
+  "project_name": "Topic Compass / Signal Editorial Platform",
+  "design_philosophy": {
+    "core_identity": "Premium Modern Editorial Discovery",
+    "emotional_tone": "Immersive, Intelligent, Sophisticated, Dark, Serious",
+    "anti_patterns": [
+      "Generic blog templates",
+      "Inter font for headings",
+      "Cheap gradients (especially teal/purple without purpose)",
+      "Standard Bootstrap/12-col equal grids",
+      "Flat solid backgrounds without texture"
+    ],
+    "key_principles": [
+      "Fusion over Imitation: Mix Magazine Editorial with SaaS Dashboard precision",
+      "Content is King: Typography and negative space drive the hierarchy",
+      "Dark-First: The interface is a dark room; content is the spotlight",
+      "Generous Spacing: 2x-3x standard Tailwind spacing (p-8, p-12)"
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Playfair Display, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "hero": "text-5xl md:text-7xl font-bold tracking-tight leading-[0.9]",
+      "h1": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h2": "text-3xl md:text-4xl font-medium tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body_lg": "text-lg md:text-xl leading-relaxed text-zinc-300",
+      "body_base": "text-base leading-relaxed text-zinc-400",
+      "caption": "text-xs uppercase tracking-[0.2em] font-bold text-zinc-500"
+    },
+    "installation": {
+      "google_fonts": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    }
+  },
+  "colors": {
+    "mode": "dark",
+    "palette": {
+      "background": {
+        "default": "#0A0A0A",
+        "surface": "#121212",
+        "surface_elevated": "#18181b"
+      },
+      "text": {
+        "primary": "#EDEDED",
+        "secondary": "#A1A1AA",
+        "muted": "#52525b"
+      },
+      "border": {
+        "default": "rgba(255, 255, 255, 0.08)",
+        "active": "rgba(255, 255, 255, 0.15)"
+      },
+      "brand": {
+        "primary": "#3B82F6",
+        "accent_glow": "rgba(59, 130, 246, 0.5)",
+        "secondary_accent": "#84CC16"
+      },
+      "status": {
+        "error": "#EF4444",
+        "success": "#10B981"
+      }
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, rgba(10, 10, 10, 0) 70%)",
+      "card_hover": "linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%)"
+    }
+  },
+  "layout_strategies": {
+    "grid_system": {
+      "type": "Bento Grid",
+      "container_class": "max-w-7xl mx-auto px-6 md:px-12",
+      "section_spacing": "py-24 md:py-32",
+      "card_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8"
+    },
+    "bento_spans": {
+      "hero_card": "col-span-1 md:col-span-2 lg:col-span-8 row-span-2",
+      "tall_card": "col-span-1 md:col-span-1 lg:col-span-4 row-span-2",
+      "standard_card": "col-span-1 md:col-span-1 lg:col-span-4",
+      "wide_card": "col-span-1 md:col-span-2 lg:col-span-6"
+    }
+  },
+  "components": {
+    "ui_library": "shadcn/ui",
+    "customizations": {
+      "card": {
+        "base": "bg-[#121212] border border-white/10 rounded-xl overflow-hidden relative group",
+        "hover": "hover:border-white/20 transition-all duration-500",
+        "content_padding": "p-6 md:p-8"
+      },
+      "button": {
+        "primary": "bg-white text-black hover:bg-zinc-200 rounded-lg px-6 py-3 font-medium transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+        "secondary": "bg-white/5 text-white border border-white/10 hover:bg-white/10 rounded-lg px-6 py-3 transition-all",
+        "ghost": "text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg px-4 py-2"
+      },
+      "input": {
+        "style": "bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-zinc-600 rounded-lg h-12 px-4"
+      },
+      "navigation": {
+        "wrapper": "fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20",
+        "link": "text-sm font-medium text-zinc-400 hover:text-white transition-colors"
+      },
+      "tags": {
+        "style": "px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 uppercase tracking-wider"
+      }
+    },
+    "visual_enhancers": {
+      "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10",
+      "noise_texture": "before:fixed before:inset-0 before:z-[-1] before:bg-[url('/images/noise.png')] before:opacity-[0.03] before:pointer-events-none",
+      "glow_effect": "shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]"
+    }
+  },
+  "image_urls": {
+    "hero_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1760978632114-0939f0d60045?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXJrJTIwYmFja2dyb3VuZCUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzczNTUyMjMwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract metallic wave pattern, perfect for Hero Section background with low opacity overlay"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1773278190465-8d009ce315a7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwZGlnaXRhbCUyMGFydCUyMGxhbmRzY2FwZSUyMG5lb258ZW58MHx8fHwxNzczNTUyMjMyfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Vibrant cityscape night, good for 'Trending Topics' or 'Future Tech' section cover"
+      }
+    ],
+    "editorial_thumbnails": [
+      {
+        "url": "https://images.unsplash.com/photo-1619080270642-6af8d090b7d6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2UlMjBtaW5pbWFsJTIwZGFyayUyMGVkaXRvcmlhbHxlbnwwfHx8fDE3NzM1NTIyMzF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "MacBook on table, great for 'Tools & Resources' or 'Productivity' articles"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758607010203-d6b7f6ec9262?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2UlMjBtaW5pbWFsJTIwZGFyayUyMGVkaXRvcmlhbHxlbnwwfHx8fDE3NzM1NTIyMzF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Ergonomic chair/desk, use for 'Work Setup' or 'Office Culture' content"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762341154386-fa765c9f2aa5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwZGlnaXRhbCUyMGFydCUyMGxhbmRzY2FwZSUyMG5lb258ZW58MHx8fHwxNzczNTUyMjMyfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Lone figure in neon rain, conceptual image for 'AI Impact' or 'Cybersecurity'"
+      }
+    ],
+    "category_abstracts": [
+      {
+        "url": "https://images.unsplash.com/photo-1764452846368-2709775eb926?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXJrJTIwYmFja2dyb3VuZCUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzczNTUyMjMwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Geometric shapes, use for 'Design Patterns' or 'Architecture' collection cover"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762417108293-91614140073a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwZ2VvbWV0cmljJTIwc2hhcGVzJTIwZGFyayUyMDNkJTIwcmVuZGVyfGVufDB8fHx8MTc3MzU1MjIzM3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Dark textured surface, good for 'Developer Tools' background"
+      }
+    ]
+  },
+  "motion_guidelines": {
+    "library": "framer-motion",
+    "defaults": {
+      "duration": 0.5,
+      "ease": [0.32, 0.72, 0, 1]
+    },
+    "types": {
+      "fade_in_up": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeOut' }}",
+      "stagger_children": "variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.1 } } }}",
+      "hover_lift": "whileHover={{ y: -4, transition: { duration: 0.2 } }}"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. START by installing the fonts: Manrope (Body), Playfair Display (Headings), JetBrains Mono (Code).",
+    "2. UPDATE tailwind.config.ts/js to include the new colors (obsidian, surface, etc) and fonts.",
+    "3. GLOBAL CSS: Set 'body' to bg-[#0A0A0A] and text-[#EDEDED]. Remove any white backgrounds.",
+    "4. COMPONENT OVERRIDES: When using Shadcn, strip the default 'bg-background' and 'border-border' if they don't match the new palette. Use explicit custom classes from 'customizations' section.",
+    "5. IMAGES: Use the provided Unsplash URLs. DO NOT use placeholders. If an image is missing, reuse a similar one from the list.",
+    "6. GRID: For the 'Discover' page, use the Bento Grid strategy. Don't just stack cards vertically.",
+    "7. NAVIGATION: Build a custom Navigation component using the 'wrapper' styles. It must have the glassmorphism effect.",
+    "8. TESTING: Add 'data-testid' to all interactive elements (buttons, links, inputs).",
+    "9. ICONS: Use 'lucide-react' (default) but style them thinly (stroke-width={1.5}) to match the elegant editorial vibe.",
+    "10. THEME: Force Dark Mode by default. If a theme toggle is implemented, ensure Light Mode is 'Paper/Ivory' based, not stark white."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid generic, 'on distribution' AI outputs. Be bold with spacing and type size.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts. Use asymmetry.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (transition: all). Use specific properties.",
+    "You MUST NOT center align the app container.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠 etc.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Use 'sonner' for toasts.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports."
+  ]
+}
