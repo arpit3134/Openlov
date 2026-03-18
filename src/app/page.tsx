@@ -1,28 +1,42 @@
-import { Metadata } from 'next';
-import { HeroSection } from '@/components/home/HeroSection';
-import { FeaturedStories } from '@/components/home/FeaturedStories';
-import { TrendingTopics } from '@/components/home/TrendingTopics';
-import { CollectionsSection } from '@/components/home/CollectionsSection';
-import { ArticlesFeed } from '@/components/home/ArticlesFeed';
-import { ResourcesSection } from '@/components/home/ResourcesSection';
-import { NewsletterSection } from '@/components/home/NewsletterSection';
-import { siteConfig } from '@/config/site';
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
 
-export const metadata: Metadata = {
-  title: `${siteConfig.name} - Intelligent Content Discovery`,
-  description: siteConfig.description,
-};
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
 
-export default function HomePage() {
-  return (
-    <div data-testid="home-page">
-      <HeroSection />
-      <FeaturedStories />
-      <TrendingTopics />
-      <CollectionsSection />
-      <ArticlesFeed />
-      <ResourcesSection />
-      <NewsletterSection />
-    </div>
-  );
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }
